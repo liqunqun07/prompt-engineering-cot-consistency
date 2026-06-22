@@ -11,6 +11,7 @@
 - `fewshot_cot_prompt.csv`：加入领域知识、Few-Shot 示例与 CoT 引导后的输出。
 - `self_consistency_vote.csv`：在 Few-Shot + CoT 基础上加入 Self-Consistency 投票后的输出。
 - `method_report.docx`：项目过程说明文档。
+- `method_report.pdf`：脱敏后的 PDF 版本说明文档。
 
 ## 方法概述
 

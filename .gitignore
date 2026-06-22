@@ -7,6 +7,3 @@ __pycache__/
 .env
 .env.*
 !.env.example
-
-# 原始 PDF 报告包含本地作者信息，仓库只保留脱敏后的 README/docx 说明。
-method_report.pdf
