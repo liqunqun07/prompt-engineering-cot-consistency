@@ -2,16 +2,23 @@
 
 本项目围绕慢性淋巴细胞白血病患者症状描述，构建一个基于大语言模型的症状映射流程。系统读取症状文本，预测对应的证型和治法，并通过不同提示工程策略对结果进行对比。
 
+## 目录结构
+
+- `code/`：代码与 notebook
+- `data/`：训练与评估数据
+- `results/`：不同提示工程的输出结果
+- `docs/`：项目说明文档和脱敏后的报告
+
 ## 文件说明
 
-- `prompt_engineering_experiment.ipynb`：主要实验 notebook，包含提示工程设计、模型调用、结果解析和评分流程。
-- `train_data.csv`：包含症状、标准证型和标准治法的训练/评估数据。
-- `baseline_zero_shot.csv`：Zero-Shot 基线输出。
-- `self_check_prompt.csv`：加入置信度与自评分后的输出。
-- `fewshot_cot_prompt.csv`：加入领域知识、Few-Shot 示例与 CoT 引导后的输出。
-- `self_consistency_vote.csv`：在 Few-Shot + CoT 基础上加入 Self-Consistency 投票后的输出。
-- `method_report.docx`：项目过程说明文档。
-- `method_report.pdf`：脱敏后的 PDF 版本说明文档。
+- `code/prompt_engineering_experiment.ipynb`：主要实验 notebook，包含提示工程设计、模型调用、结果解析和评分流程。
+- `data/train_data.csv`：包含症状、标准证型和标准治法的训练/评估数据。
+- `results/baseline_zero_shot.csv`：Zero-Shot 基线输出。
+- `results/self_check_prompt.csv`：加入置信度与自评分后的输出。
+- `results/fewshot_cot_prompt.csv`：加入领域知识、Few-Shot 示例与 CoT 引导后的输出。
+- `results/self_consistency_vote.csv`：在 Few-Shot + CoT 基础上加入 Self-Consistency 投票后的输出。
+- `docs/method_report.docx`：项目过程说明文档。
+- `docs/method_report.pdf`：脱敏后的 PDF 版本说明文档。
 
 ## 方法概述
 
@@ -45,7 +52,7 @@ export BAIDU_LLM_API_KEY="your_llm_key"
 export BAIDU_EMBEDDING_API_KEY="your_embedding_key"
 ```
 
-然后打开并运行 `prompt_engineering_experiment.ipynb`。如需更换模型接口，可额外设置：
+然后打开并运行 `code/prompt_engineering_experiment.ipynb`。如需更换模型接口，可额外设置：
 
 ```bash
 export BAIDU_LLM_BASE_URL="https://aistudio.baidu.com/llm/lmapi/v3"
