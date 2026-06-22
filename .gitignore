@@ -9,4 +9,4 @@ __pycache__/
 !.env.example
 
 # 原始 PDF 报告包含本地作者信息，仓库只保留脱敏后的 README/docx 说明。
-提示词程序报告.pdf
+method_report.pdf
